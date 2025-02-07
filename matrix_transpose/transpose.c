@@ -13,8 +13,8 @@ void print_matrix(int *matrix, int row, int col) {
 }
 
 int main() {
-    int row = 3;
-    int col = 3;
+    int row = 500;
+    int col = 100;
     int *a = (int *)malloc(row * col * sizeof(int));
     int *b = (int *)malloc(row * col * sizeof(int));
 

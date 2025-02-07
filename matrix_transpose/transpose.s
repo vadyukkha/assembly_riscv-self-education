@@ -1,3 +1,11 @@
+# Compute transpose(...) using algorithm below
+#
+# for (size_t i = 0; i < col_a; i++) {
+#     for (size_t j = 0; j < col_b; j++) {
+#         transpose[j * col_a + i] = original[i * col_b + j];
+#     }
+# }
+
     .globl transpose
     .type transpose, @function
     .section .text
