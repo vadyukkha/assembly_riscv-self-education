@@ -17,12 +17,10 @@ generate_sum_prod_arr:
     # a3 - prod_ar
     # a4 - size
 
-    li t0, 4                    # word size
     mv t3, a4                   # t1 = size
-    vsetvli t1, a4, e32         
-
 loop:
-    beqz t3, done               # if size == 0, exit
+    blez t3, done               # if size <= 0, exit
+    vsetvli t1, t3, e32         
 
     vle32.v v0, (a0)            # load el from A
     vle32.v v1, (a1)            # load el from B
